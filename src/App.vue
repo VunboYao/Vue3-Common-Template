@@ -3,10 +3,10 @@
     <HelloWorld
       ref="modal"
       foo="Ok"
-      @change="id => 12"
     >
-      <template #header="{body, age}">
-        <h2>999 {{ body }} => {{ age }}</h2>
+      <template #header="{customAttr}">
+        <h2>999</h2>
+        <span>{{ customAttr }}</span>
       </template>
       888
     </HelloWorld>
