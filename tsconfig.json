@@ -15,9 +15,9 @@
 
     "noUnusedParameters": false, // 若有未使用的参数则报错
 
-//    "strict": true, // 所有语法检查的总开工，默认开启
+    "strict": true, // 所有语法检查的总开工，默认开启
      "alwaysStrict": true, // 编译后的文件是否是严格模式
-     "noImplicitAny": false, // 不允许隐式推导为any类型
+     "noImplicitAny": true, // 不允许隐式推导为any类型
      "noImplicitThis": true, // 不允许不明确的类型 this
      "strictNullChecks": true, // 严格检查空值， null 和 undefined
 

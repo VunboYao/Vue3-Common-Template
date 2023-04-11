@@ -28,9 +28,11 @@
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@vitejs/plugin-legacy": "^2.3.1",
     "@vitejs/plugin-vue": "^3.2.0",
+    "@vunbo/eslint-config": "^1.0.5",
     "eslint": "^8.28.0",
     "eslint-plugin-vue": "^9.8.0",
     "parser": "link:@/typescript-eslint/parser",
-    "terser": "^5.16.0"
+    "terser": "^5.16.0",
+    "unplugin-auto-import": "^0.15.2"
   }
 }
