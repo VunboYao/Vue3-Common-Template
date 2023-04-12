@@ -1,4 +1,4 @@
-(function(win, document) {
+(function (win, document) {
   function setFontSize() {
     const winWidth = document.documentElement.clientWidth || document.body.clientWidth || win.screen.width
     document.documentElement.style.fontSize = `${(winWidth / 750) * 100}px`
