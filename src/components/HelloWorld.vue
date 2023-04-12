@@ -5,10 +5,7 @@
     type="text"
     @input="handleChange"
   >
-  <slot
-    name="header"
-    custom-attr="组件内部的数据"
-  >
+  <slot name="header" custom-attr="组件内部的数据">
     {{ slots }}
   </slot>
   <slot>{{ slots }}</slot>
