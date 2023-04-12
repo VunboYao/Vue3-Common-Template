@@ -53,6 +53,16 @@ defineExpose({
 })
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+div {
+  height: 200px;
+  display: flex;
+  order: 1;
+  border: 1px solid #CCC;
+  color: darkblue;
+  list-style-type: none;
+  background: #777;
+  padding: 20px;
+  box-shadow: antiquewhite;
+}
 </style>

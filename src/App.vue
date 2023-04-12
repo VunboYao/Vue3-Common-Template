@@ -1,11 +1,11 @@
 <template>
   <div>
     <HelloWorld ref="modal" foo="Ok">
-      <template #header="{customAttr}">
+      <template #header="{ customAttr }">
         <h2>999</h2>
         <span>{{ customAttr }}</span>
       </template>
-      888
+      88845
     </HelloWorld>
   </div>
 </template>
@@ -23,3 +23,19 @@ onMounted(() => {
   }, 2000)
 })
 </script>
+
+<style>
+div {
+  display: flex;
+  order: 1;
+  height: 200px;
+  margin: 10px;
+  list-style-type: none;
+  color: darkblue;
+  pointer-events: all;
+  cursor: pointer;
+  background: #777;
+  border: 1px solid #ccc;
+  box-shadow: antiquewhite;
+}
+</style>

@@ -15,4 +15,3 @@ function MockAPI(ad: MockReq) {
     data: ad,
   })
 }
-

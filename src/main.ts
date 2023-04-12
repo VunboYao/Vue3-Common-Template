@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
+import App from './App.vue'
 import { Pinia } from '@/store'
 import router from '@/router'
-import App from './App.vue'
 import './index.css'
 
 // rem设置
