@@ -7,7 +7,7 @@ interface MockReq {
 
 interface MockRes {
   abc: number
-  cba: string
+  cba: any
 }
 
 function MockAPI(ad: MockReq) {
@@ -15,3 +15,17 @@ function MockAPI(ad: MockReq) {
     data: ad,
   })
 }
+
+const func = () => {
+  console.log(123)
+}
+
+const age = 123
+console.log(age)
+
+async function foo(): Promise<boolean> {
+  console.log('123')
+  return true
+}
+
+const arr = '123'
