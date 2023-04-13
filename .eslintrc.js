@@ -9,8 +9,8 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:vue/vue3-strongly-recommended',
-    'plugin:@typescript-eslint/recommended',
-    '@vue/typescript/recommended',
+    // 'plugin:@typescript-eslint/recommended',
+    '@vue/eslint-config-typescript/recommended',
     './.eslintrc-auto-import.json',
   ],
   parserOptions: {
@@ -88,7 +88,7 @@ module.exports = {
     'no-whitespace-before-property': 'error',
 
     // 变量声明建议用const
-    'prefer-const': 'warn',
+    'prefer-const': 'error',
 
     // 对象大括号中属性空格格式化
     'object-curly-spacing': ['error', 'always'],
@@ -156,7 +156,7 @@ module.exports = {
     'eol-last': 'error',
 
     // 禁止函数调用时有空格 // 关闭原因：defineEmits时警告问题
-    'func-call-spacing': 'off',
+    'func-call-spacing': 'error',
 
     // 禁用标识符，可指定禁止使用的变量标识符
     'id-blacklist': ['error'],
