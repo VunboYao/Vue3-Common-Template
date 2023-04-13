@@ -23,7 +23,9 @@ module.exports = {
      “warn”/1 警告
      "error"/2 错误
    */
-    'no-console': ['warn'],
+
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
 
     'vue/component-tags-order': ['error', {
       order: [['script', 'template'], 'style'],

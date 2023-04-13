@@ -36,7 +36,6 @@ const res = inject(key, 'defaultValue')
 const res2 = inject(noProvideKey, 'defaultValue')
 
 const el = ref<HTMLInputElement | null>(null)
-
 onMounted(() => {
   el.value?.focus()
 })
@@ -44,12 +43,14 @@ onMounted(() => {
 const open = () => {
   year.value = 666
 }
+const usebanner = 1
 
 const slots = useSlots()
 const attrs = useAttrs()
 
 defineExpose({
   open,
+  usebanner,
 })
 </script>
 

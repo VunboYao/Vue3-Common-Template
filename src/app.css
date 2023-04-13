@@ -1,5 +1,5 @@
-.ql-editor ul>li::before {
-  content: '\2022';
+.ql-editor ul > li::before {
+  content: "\2022";
 }
 
 .ql-editor ul[data-checked="true"],
@@ -7,13 +7,13 @@
   pointer-events: none;
 }
 
-.ql-editor ul[data-checked="true"]>li *,
-.ql-editor ul[data-checked="false"]>li * {
+.ql-editor ul[data-checked="true"] > li *,
+.ql-editor ul[data-checked="false"] > li * {
   pointer-events: all;
 }
 
-.ql-editor ul[data-checked="true"]>li::before,
-.ql-editor ul[data-checked="false"]>li::before {
+.ql-editor ul[data-checked="true"] > li::before,
+.ql-editor ul[data-checked="false"] > li::before {
   display: flex;
   order: 1;
   height: 200px;
@@ -24,6 +24,6 @@
   pointer-events: all;
   cursor: pointer;
   background: #777;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   box-shadow: antiquewhite;
 }
