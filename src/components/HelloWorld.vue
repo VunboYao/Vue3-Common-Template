@@ -28,7 +28,6 @@ const year: Ref<string | number> = ref(200)
 year.value = '123'
 
 function handleChange(event: Event) {
-  // eslint-disable-next-line no-console
   console.log((event.target as HTMLInputElement).value)
 }
 

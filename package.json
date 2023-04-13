@@ -26,9 +26,10 @@
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.58.0",
-    "@vue/eslint-config-typescript": "^11.0.2",
+    "@typescript-eslint/parser": "^5.58.0",
     "@vitejs/plugin-legacy": "^2.3.1",
     "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
     "@vunbo/eslint-config": "^1.0.5",
     "eslint": "^8.38.0",
     "eslint-plugin-vue": "^9.10.0",

@@ -1,6 +1,8 @@
 module.exports = {
   env: {
     node: true,
+    browser: true,
+    commonjs: true,
   },
   extends: [
     'eslint:recommended',
@@ -21,6 +23,8 @@ module.exports = {
      “warn”/1 警告
      "error"/2 错误
    */
+    'no-console': ['warn'],
+
     'vue/component-tags-order': ['error', {
       order: [['script', 'template'], 'style'],
     }],
