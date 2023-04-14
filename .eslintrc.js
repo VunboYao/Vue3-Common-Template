@@ -218,6 +218,14 @@ module.exports = {
     // 字符串拼接建议优先使用模版字符串
     'prefer-template': ['warn'],
 
+    // 导入对象换行规则
+    'object-curly-newline': ['error', {
+      'ObjectExpression': 'always',
+      'ImportDeclaration': {
+        'minProperties': 3, 'multiline': true,
+      },
+    }],
+
     // 临时排除的检测
     'vue/v-on-event-hyphenation': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
