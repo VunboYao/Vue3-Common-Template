@@ -8,9 +8,21 @@ module.exports = {
   'overrides': [
     {
       'files': [
-        '**/*.(css|less)',
+        '**/*.(css)',
+      ],
+      'customSyntax': 'postcss',
+    },
+    {
+      'files': [
+        '**/*.(less)',
       ],
       'customSyntax': 'postcss-less',
+    },
+    {
+      'files': [
+        '**/*.(scss)',
+      ],
+      'customSyntax': 'postcss-scss',
     },
   ],
   'rules': {

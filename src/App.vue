@@ -24,18 +24,21 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style lang="less">
 div {
-  display: flex;
-  order: 1;
-  height: 200px;
-  margin: 10px;
-  color: darkblue;
-  list-style-type: none;
-  pointer-events: all;
-  cursor: pointer;
-  background: #777;
-  border: 1px solid #CCC;
-  box-shadow: antiquewhite;
+  ul > li {
+    display: flex;
+    order: 1;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    color: darkblue;
+    list-style-type: none;
+    pointer-events: all;
+    cursor: pointer;
+    background: #777;
+    border: 1px solid #CCC;
+    box-shadow: antiquewhite;
+  }
 }
 </style>
