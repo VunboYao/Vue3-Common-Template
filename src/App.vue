@@ -30,12 +30,12 @@ div {
   order: 1;
   height: 200px;
   margin: 10px;
-  list-style-type: none;
   color: darkblue;
+  list-style-type: none;
   pointer-events: all;
   cursor: pointer;
   background: #777;
-  border: 1px solid #ccc;
+  border: 1px solid #CCC;
   box-shadow: antiquewhite;
 }
 </style>

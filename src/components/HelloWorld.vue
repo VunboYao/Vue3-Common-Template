@@ -56,14 +56,14 @@ defineExpose({
 
 <style scoped>
 div {
-  height: 200px;
   display: flex;
   order: 1;
-  border: 1px solid #CCC;
+  height: 200px;
+  padding: 20px;
   color: darkblue;
   list-style-type: none;
   background: #777;
-  padding: 20px;
+  border: 1px solid #CCC;
   box-shadow: antiquewhite;
 }
 </style>

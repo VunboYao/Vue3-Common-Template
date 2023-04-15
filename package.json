@@ -11,7 +11,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --fix",
-    "assets:css": "npx stylelint ./src/assets --fix"
+    "css": "npx stylelint . --fix"
   },
   "dependencies": {
     "@types/node": "^18.15.11",
@@ -33,9 +33,12 @@
     "@vunbo/eslint-config": "^1.0.5",
     "eslint": "^8.38.0",
     "eslint-plugin-vue": "^9.10.0",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
     "postcss-less": "^6.0.0",
     "stylelint": "^15.4.0",
     "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^32.0.0",
     "terser": "^5.16.9",
     "unplugin-auto-import": "^0.15.2"
