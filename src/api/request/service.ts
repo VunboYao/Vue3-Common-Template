@@ -3,7 +3,7 @@ import axios from 'axios'
 
 const service: AxiosInstance = axios.create({
   baseURL: '/',
-  withCredentials: true,
+  withCredentials: true
 })
 
 service.interceptors.request.use((config) => {

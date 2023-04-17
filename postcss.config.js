@@ -10,7 +10,7 @@ module.exports = {
       mediaQuery: false, // 不转换媒体查询
       selectorBlackList: [], // 忽略的选择器
       minPixelValue: 2, // 会被转换的最小px值
-      exclude: /node_modules/i, // 排除文件
-    }),
-  ],
+      exclude: /node_modules/i // 排除文件
+    })
+  ]
 }

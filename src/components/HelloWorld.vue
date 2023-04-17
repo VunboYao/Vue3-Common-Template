@@ -19,7 +19,6 @@ const props = defineProps<{
   bar?: number
 }>()
 
-// eslint-disable-next-line func-call-spacing
 const emit = defineEmits<{
   (e: 'change', id: number): void
   (e: 'update', value: string): void

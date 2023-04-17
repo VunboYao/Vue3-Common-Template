@@ -1,9 +1,6 @@
 <template>
   <div>
-    <HelloWorld
-      ref="modal"
-      foo="Ok"
-    />
+    <HelloWorld ref="modal" foo="Ok" bar="12" />
   </div>
 </template>
 <script setup lang="ts">

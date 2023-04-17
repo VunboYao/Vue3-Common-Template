@@ -88,7 +88,7 @@ module.exports = {
     // 变量声明建议用const
     'prefer-const': 'error',
 
-    // 对象大括号中属性空格格式化
+    // 对象大括号中属性空格格式化 { 'foo': 'bar' };
     'object-curly-spacing': ['error', 'always'],
 
     // 操作符后空格
@@ -129,35 +129,43 @@ module.exports = {
       'enforceForRenamedProperties': false
     }],
 
-    // 不允许初始化为 undefined
+    // 不允许初始化为：var foo = undefined
     'no-undef-init': 'error',
 
-    // 禁止将 undefined 作为标识符
+    // 禁止将 undefined 作为标识符： var undefined = "hi";
     'no-undefined': 'warn',
 
     // 禁止在变量定义之前使用
     'no-use-before-define': 'warn',
 
-    // 强制在代码块中开括号和比括号后有空格
+    // 大括号{}内需要有空格：function foo() { return true; }
     'block-spacing': ['error', 'always'],
 
     // 对象、数组末尾逗号.换行的最后一个元素添加逗号
     'comma-dangle': ['error', 'never'],
 
     // 逗号风格
+    /*
+    * var foo = ["apples"
+           , "oranges"];
+    * */
     'comma-style': 'error', // 默认在数组元素，对象属性，变量声明之后
 
-    // 计算属性空格控制
+    // 计算属性空格控制： obj[foo ]
     'computed-property-spacing': 'error', // 默认never，禁止使用空格
 
     // 要求文件末尾保留一行空行
     'eol-last': 'error',
 
-    // 禁止函数调用时有空格 // 关闭原因：defineEmits时警告问题
-    'func-call-spacing': 'error',
+    // 禁止函数调用时有空格： fn ();
+    // Note: you must disable the base rule as it can report incorrect errors
+    // https://typescript-eslint.io/rules/func-call-spacing/
+    'func-call-spacing': 'off',
+    '@typescript-eslint/func-call-spacing': 'error',
 
     // 禁用标识符，可指定禁止使用的变量标识符
-    'id-blacklist': ['error'],
+    // This rule was deprecated in ESLint v7.5.0 and replaced by the id-denylist rule.
+    // 'id-blacklist': ['error'],
 
     // 函数内的参数禁止换行
     'function-paren-newline': ['error', 'never'],
@@ -165,7 +173,13 @@ module.exports = {
     // !禁止在箭头函数体之前出现换行
     'implicit-arrow-linebreak': 'error',
 
-    // 禁止对象key和value之间的空格
+    // 箭头函数前后需要空格： () => {}
+    'arrow-spacing': ['error', {
+      'before': true,
+      'after': true
+    }],
+
+    // 禁止对象key和value之间的空格: {key : value}
     'key-spacing': 'error',
 
     // 驼峰命名
@@ -177,7 +191,7 @@ module.exports = {
     // 组件名称多单词
     'vue/multi-word-component-names': 'off',
 
-    // TypeScript配置
+    // TypeScript配置, 接口声明
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'none', // 'none' or 'semi' or 'comma'
@@ -192,7 +206,7 @@ module.exports = {
     // 操作符不换行
     'operator-linebreak': ['off', 'none'],
 
-    // 块级模块前需有空格， 默认 always 必须有
+    // 块级模块前需有空格， 默认 always 必须有 if (true) {...}
     'space-before-blocks': 'error',
     '@typescript-eslint/space-before-blocks': ['error'],
 

@@ -12,11 +12,11 @@ module.exports = {
     loaderOptions: {
       less: {
         modifyVars: {
-          hack: `true; @import "${resolve('./src/assets/less/theme.less')}";`,
+          hack: `true; @import "${resolve('./src/assets/less/theme.less')}";`
         },
-        javascriptEnabled: true,
-      },
-    },
+        javascriptEnabled: true
+      }
+    }
   },
 
   configureWebpack: (config) => {
@@ -24,7 +24,7 @@ module.exports = {
       // 打包文件大小配置
       config.performance = {
         maxEntrypointSize: 10000000,
-        maxAssetSize: 30000000,
+        maxAssetSize: 30000000
       }
 
       // 使用gzip压缩
@@ -32,7 +32,7 @@ module.exports = {
         algorithm: 'gzip',
         test: new RegExp(`\\.(${ productionGzipExtensions.join('|') })$`),
         threshold: 10240,
-        minRatio: 0.8,
+        minRatio: 0.8
       }))
     }
   },
@@ -45,9 +45,9 @@ module.exports = {
         ws: false,
         changeOrigin: true,
         pathRewrite: {
-          '^/api': '',
-        },
-      },
-    },
-  },
+          '^/api': ''
+        }
+      }
+    }
+  }
 }

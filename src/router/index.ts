@@ -6,10 +6,11 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     name: PAGE_XXX,
-    component: () => import('@/App.vue'),
-  },
+    component: () => import('@/App.vue')
+  }
 ]
 export default createRouter({
   history: createWebHashHistory(),
-  routes,
+  routes
 })
+

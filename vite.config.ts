@@ -8,33 +8,33 @@ export default defineConfig({
   plugins: [
     vue(),
     viteLegacyPlugin({
-      targets: ['defaults', 'not IE 11', 'Android 4.4', 'iOS 10.0', 'Chrome > 31'],
+      targets: ['defaults', 'not IE 11', 'Android 4.4', 'iOS 10.0', 'Chrome > 31']
     }),
     AutoImport({
       include: [
         /\.[tj]sx?$/,
-        /\.vue$/, /\.vue\?vue/, // .vue
+        /\.vue$/, /\.vue\?vue/ // .vue
       ],
       imports: [
         'vue',
-        'vue-router',
+        'vue-router'
       ],
       eslintrc: {
         enabled: false,
         filepath: './.eslintrc-auto-import.json',
-        globalsPropValue: true,
-      },
-    }),
+        globalsPropValue: true
+      }
+    })
   ],
 
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
+      '@': path.resolve(__dirname, 'src')
+    }
   },
 
   server: {
-    host: true,
+    host: true
     /* proxy: {
       '/': {
         target: '',
@@ -42,5 +42,5 @@ export default defineConfig({
         rewrite: (path) => path.replace(''),
       },
     }, */
-  },
+  }
 })
