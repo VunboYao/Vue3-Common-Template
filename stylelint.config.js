@@ -3,27 +3,27 @@ module.exports = {
   'extends': [
     'stylelint-config-standard',
     'stylelint-config-recess-order',
-    'stylelint-config-recommended-vue',
+    'stylelint-config-recommended-vue'
   ],
   'overrides': [
     {
       'files': [
-        '**/*.(css)',
+        '**/*.(css)'
       ],
-      'customSyntax': 'postcss',
+      'customSyntax': 'postcss'
     },
     {
       'files': [
-        '**/*.(less)',
+        '**/*.(less)'
       ],
-      'customSyntax': 'postcss-less',
+      'customSyntax': 'postcss-less'
     },
     {
       'files': [
-        '**/*.(scss)',
+        '**/*.(scss)'
       ],
-      'customSyntax': 'postcss-scss',
-    },
+      'customSyntax': 'postcss-scss'
+    }
   ],
   'rules': {
     // 缩进 2 个空格
@@ -42,9 +42,9 @@ module.exports = {
       'never',
       {
         ignore: [
-          'after-declaration',
-        ],
-      },
+          'after-declaration'
+        ]
+      }
     ],
     // 每个样式规则前后都有空行，除了第一条规则与规则前有注释
     'rule-empty-line-before': [
@@ -52,13 +52,13 @@ module.exports = {
       {
         except: [
           'after-single-line-comment',
-          'first-nested',
-        ],
-      },
+          'first-nested'
+        ]
+      }
     ],
     // 在结尾 "}" 之前不允许有空行
     'block-closing-brace-empty-line-before': [
-      'never',
+      'never'
     ],
     // "@" 语句之前都有空行，但是忽略 "@" 语句在代码块中间与同个非代码块 "@" 语句之间的空行这两种情况
     'at-rule-empty-line-before': [
@@ -66,9 +66,9 @@ module.exports = {
       {
         ignore: [
           'inside-block',
-          'blockless-after-same-name-blockless',
-        ],
-      },
+          'blockless-after-same-name-blockless'
+        ]
+      }
     ],
     // 不允许超过一行的空行
     'max-empty-lines': 1,
@@ -116,7 +116,7 @@ module.exports = {
     // 媒体查询中设置断点宽度里的 ":" 后必须有空格
     'media-feature-colon-space-after': 'always',
     // 媒体查询中设置断点宽度里的 ":" 前不能有空格
-    'media-feature-colon-space-before': 'never',
-  },
+    'media-feature-colon-space-before': 'never'
+  }
 }
 

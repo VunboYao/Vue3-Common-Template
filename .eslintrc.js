@@ -2,7 +2,7 @@ module.exports = {
   env: {
     node: true,
     browser: true,
-    commonjs: true,
+    commonjs: true
   },
   extends: [
     'eslint:recommended',
@@ -10,11 +10,11 @@ module.exports = {
     'plugin:vue/vue3-recommended',
     'plugin:vue/vue3-strongly-recommended',
     '@vue/eslint-config-typescript/recommended',
-    './.eslintrc-auto-import.json',
+    './.eslintrc-auto-import.json'
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    parser: '@typescript-eslint/parser',
+    parser: '@typescript-eslint/parser'
   },
   rules: {
     /*
@@ -23,22 +23,19 @@ module.exports = {
      "error"/2 错误
    */
 
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
 
-    'vue/component-tags-order': ['error', {
-      order: [['script', 'template'], 'style'],
-    }],
     // 关闭分号
     'semi': ['error', 'never'],
 
     // 禁止多个空格
     'no-multi-spaces': ['error', {
-      'ignoreEOLComments': false,
+      'ignoreEOLComments': false
     }],
 
     // 一致的缩进
-    'indent': ['off'],
+    'indent': ['error', 2],
     '@typescript-eslint/indent': ['error', 2],
 
     // 禁止行尾空格
@@ -54,7 +51,7 @@ module.exports = {
     'array-bracket-spacing': ['error', 'never', {
       'singleValue': false,
       'objectsInArrays': false,
-      'arraysInArrays': false,
+      'arraysInArrays': false
     }],
 
     // 大括号风格，默认 左括号紧跟变量名称后。 https://cn.eslint.org/docs/rules/brace-style
@@ -71,18 +68,18 @@ module.exports = {
       'error',
       {
         singleline: {
-          max: 2,
+          max: 3
         },
         multiline: {
-          max: 1,
-        },
-      },
+          max: 1
+        }
+      }
     ],
 
     // 禁止多行空行
-    'no-multiple-empty-lines': ['error', {
+    'no-multiple-empty-lines': ['off', {
       max: 1,
-      maxEOF: 1,
+      maxEOF: 1
     }],
 
     // 禁止属性前有空白，如：foo[ bar ]
@@ -96,10 +93,10 @@ module.exports = {
 
     // 操作符后空格
     'space-infix-ops': ['error', {
-      'int32Hint': false,
+      'int32Hint': false
     }],
     '@typescript-eslint/space-infix-ops': ['error', {
-      'int32Hint': false,
+      'int32Hint': false
     }],
 
     // 强制类型注解后有空格：默认配置：{before: true, after: true}
@@ -113,23 +110,23 @@ module.exports = {
     'no-template-curly-in-string': 'error',
 
     // 禁止出现空函数
-    'no-empty-function': ['error'],
+    'no-empty-function': ['warn'],
 
     // 大括号控制
     'curly': ['error'],
 
     // async函数内必须有await
-    'require-await': 'warn',
+    'require-await': 'error',
 
     // 禁止变量声明覆盖
-    'no-shadow': 'off',
+    'no-shadow': 'error',
 
     // 推荐使用解构获取数据
-    'prefer-destructuring': ['warn', {
+    'prefer-destructuring': ['off', {
       'array': false, // 数组不推荐
-      'object': true, //对象解构
+      'object': true //对象解构
     }, {
-      'enforceForRenamedProperties': false,
+      'enforceForRenamedProperties': false
     }],
 
     // 不允许初始化为 undefined
@@ -145,7 +142,7 @@ module.exports = {
     'block-spacing': ['error', 'always'],
 
     // 对象、数组末尾逗号.换行的最后一个元素添加逗号
-    'comma-dangle': ['error', 'always-multiline'],
+    'comma-dangle': ['error', 'never'],
 
     // 逗号风格
     'comma-style': 'error', // 默认在数组元素，对象属性，变量声明之后
@@ -165,7 +162,7 @@ module.exports = {
     // 函数内的参数禁止换行
     'function-paren-newline': ['error', 'never'],
 
-    // 禁止在箭头函数体之前出现换行
+    // !禁止在箭头函数体之前出现换行
     'implicit-arrow-linebreak': 'error',
 
     // 禁止对象key和value之间的空格
@@ -178,25 +175,25 @@ module.exports = {
     'vue/require-valid-default-prop': 'warn',
 
     // 组件名称多单词
-    'vue/multi-word-component-names': 'warn',
+    'vue/multi-word-component-names': 'off',
 
     // TypeScript配置
     '@typescript-eslint/member-delimiter-style': ['error', {
       multiline: {
         delimiter: 'none', // 'none' or 'semi' or 'comma'
-        requireLast: true,
+        requireLast: true
       },
       singleline: {
         delimiter: 'semi', // 'semi' or 'comma'
-        requireLast: false,
-      },
+        requireLast: false
+      }
     }],
 
     // 操作符不换行
     'operator-linebreak': ['off', 'none'],
 
     // 块级模块前需有空格， 默认 always 必须有
-    'space-before-blocks': 'off',
+    'space-before-blocks': 'error',
     '@typescript-eslint/space-before-blocks': ['error'],
 
     // 函数括号前需要有空格
@@ -208,7 +205,7 @@ module.exports = {
       // 命名函数无需空格
       'named': 'never',
       // 匿名函数必须有空格
-      'anonymous': 'always',
+      'anonymous': 'always'
     }],
 
     // 禁止使用对象原型方法声明类型
@@ -222,13 +219,12 @@ module.exports = {
       // 'ObjectExpression': 'always',
       'ImportDeclaration': {
         'minProperties': 3,
-        'multiline': true,
-      },
+        'multiline': true
+      }
     }],
 
     // 临时排除的检测
-    'vue/v-on-event-hyphenation': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
-    'vue/comment-directive': 'off',
-  },
+    'vue/comment-directive': 'off'
+  }
 }

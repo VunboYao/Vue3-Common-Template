@@ -12,7 +12,7 @@ interface MockRes {
 
 function MockAPI(ad: MockReq) {
   return request<MockRes>({
-    data: ad,
+    data: ad
   })
 }
 

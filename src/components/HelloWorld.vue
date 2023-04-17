@@ -50,7 +50,7 @@ const attrs = useAttrs()
 
 defineExpose({
   open,
-  usebanner,
+  usebanner
 })
 </script>
 
