@@ -9,7 +9,6 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:vue/vue3-strongly-recommended',
-    // 'plugin:@typescript-eslint/recommended',
     '@vue/eslint-config-typescript/recommended',
     './.eslintrc-auto-import.json',
   ],
@@ -229,5 +228,6 @@ module.exports = {
     // 临时排除的检测
     'vue/v-on-event-hyphenation': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
+    'vue/comment-directive': 'off'
   },
 }
