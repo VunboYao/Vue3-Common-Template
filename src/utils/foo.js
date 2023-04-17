@@ -44,7 +44,9 @@ module.exports = {
         target: 'https://test.com', // 服务地址
         ws: false,
         changeOrigin: true,
-        pathRewrite: { '^/api': '' },
+        pathRewrite: {
+          '^/api': '',
+        },
       },
     },
   },
