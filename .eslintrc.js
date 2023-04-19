@@ -5,8 +5,7 @@ module.exports = {
   //   commonjs: true
   // },
   extends: [
-    'ygxy',
-    './.eslintrc-auto-import.json'
+    'ygxy'
   ]
   // parserOptions: {
   //   ecmaVersion: 'latest',
