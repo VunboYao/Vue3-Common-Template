@@ -51,6 +51,9 @@ devDependencies:
   eslint:
     specifier: ^8.38.0
     version: 8.38.0
+  eslint-config-ygxy:
+    specifier: ^1.0.10
+    version: 1.0.10(eslint@8.38.0)(typescript@4.9.5)
   eslint-plugin-vue:
     specifier: ^9.10.0
     version: 9.10.0(eslint@8.38.0)
@@ -81,9 +84,15 @@ devDependencies:
   stylelint-config-standard:
     specifier: ^32.0.0
     version: 32.0.0(stylelint@15.4.0)
+  stylelint-config-ygxy:
+    specifier: ^1.0.10
+    version: 1.0.10
   terser:
     specifier: ^5.16.9
     version: 5.16.9
+  ts-config-ygxy:
+    specifier: ^1.0.10
+    version: 1.0.10
   unplugin-auto-import:
     specifier: ^0.15.2
     version: 0.15.2
@@ -1549,6 +1558,21 @@ packages:
   /escape-string-regexp@5.0.0:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
+    dev: true
+
+  /eslint-config-ygxy@1.0.10(eslint@8.38.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-cGC+wHJ1rYbJ38TWwPsi9MGrSwLoms2x0Ms3rAFN5nUMAQAe0pSCfJGKGN9ppBG6cHN+iFJ5Co+NTL7K6prAXg==}
+    peerDependencies:
+      eslint: '>=7.4.0'
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.58.0(@typescript-eslint/parser@5.58.0)(eslint@8.38.0)(typescript@4.9.5)
+      '@typescript-eslint/parser': 5.58.0(eslint@8.38.0)(typescript@4.9.5)
+      '@vue/eslint-config-typescript': 11.0.2(eslint-plugin-vue@9.10.0)(eslint@8.38.0)(typescript@4.9.5)
+      eslint: 8.38.0
+      eslint-plugin-vue: 9.10.0(eslint@8.38.0)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /eslint-import-resolver-node@0.3.7:
@@ -3590,6 +3614,21 @@ packages:
       stylelint-config-recommended: 11.0.0(stylelint@15.4.0)
     dev: true
 
+  /stylelint-config-ygxy@1.0.10:
+    resolution: {integrity: sha512-rZxtpjbv2/H2Y6jjjv6urHQLFIUTzjT/lpdVFH38z8AppLe/aPdb9z+BRe+FOHpgzSBKz+o0MzoXIUMpnyBh9Q==}
+    dependencies:
+      postcss: 8.4.21
+      postcss-html: 1.5.0
+      postcss-less: 6.0.0(postcss@8.4.21)
+      postcss-scss: 4.0.6(postcss@8.4.21)
+      stylelint: 15.4.0
+      stylelint-config-recess-order: 4.0.0(stylelint@15.4.0)
+      stylelint-config-recommended-vue: 1.4.0(postcss-html@1.5.0)(stylelint@15.4.0)
+      stylelint-config-standard: 32.0.0(stylelint@15.4.0)
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /stylelint-order@6.0.3(stylelint@15.4.0):
     resolution: {integrity: sha512-1j1lOb4EU/6w49qZeT2SQVJXm0Ht+Qnq9GMfUa3pMwoyojIWfuA+JUDmoR97Bht1RLn4ei0xtLGy87M7d29B1w==}
     peerDependencies:
@@ -3724,6 +3763,10 @@ packages:
   /trim-newlines@3.0.1:
     resolution: {integrity: sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==}
     engines: {node: '>=8'}
+    dev: true
+
+  /ts-config-ygxy@1.0.10:
+    resolution: {integrity: sha512-NhblqEp3b+4o6MKk0OyDQUgfu58nbesx+64AujZAI8pSTV0XKW1Pvt31VB3aZ94q8YaaJMJH4xTqZ8rLYnFCJQ==}
     dev: true
 
   /tsconfig-paths@3.14.2:
