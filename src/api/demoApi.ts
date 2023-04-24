@@ -27,5 +27,3 @@ async function foo(): Promise<boolean> {
   console.log('123')
   return true
 }
-
-const arr = '123'

@@ -6,7 +6,11 @@ module.exports = {
   // },
   extends: [
     'ygxy'
-  ]
+  ],
+  rules: {
+    'no-undefined': 'off'
+    // '@typescript-eslint/no-non-null-assertion': 'error'
+  }
   // parserOptions: {
   //   ecmaVersion: 'latest',
   //   parser: '@typescript-eslint/parser'

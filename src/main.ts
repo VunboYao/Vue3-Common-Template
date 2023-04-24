@@ -5,7 +5,7 @@ import router from '@/router'
 import './index.css'
 
 // rem设置
-// import '@/utils/rem'
+import '@/utils/rem'
 
 // UI组件注册
 import Antd from 'ant-design-vue'
