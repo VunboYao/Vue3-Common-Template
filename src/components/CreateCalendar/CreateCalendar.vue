@@ -9,12 +9,12 @@
     <div class="c-header">
       <span v-for="item in weeksHeader" :key="item">{{ item }}</span>
     </div>
-    <div class="c-month" @click.passive="onTouch">
+    <div ref="wrapContainer" class="c-month">
       <span
         v-for="(item, index) in daysMap"
         :key="index"
         :class="onComputedClass(item)"
-        @click="onSelected(item)"
+        @click.capture="onSelected(item)"
       >{{ item.value }}</span>
     </div>
 
@@ -31,6 +31,7 @@
 </template>
 
 <script lang="ts" setup>
+import useTouch from '@/components/CreateCalendar/hooks/useTouch'
 import useCalendar, { iDaysMap } from '@/hooks/useCalendar'
 
 const {
@@ -57,11 +58,6 @@ const onComputedClass = (item: any) => {
   ]
 }
 
-// !????
-const onTouch = (e: Event) => {
-  console.log(e)
-}
-
 // 递增
 const next = () => {
   daysMap.value = nextMonth()
@@ -78,6 +74,8 @@ const oldYear = () => {
   daysMap.value = generate()
 }
 
+const wrapContainer = ref<HTMLElement | null>(null)
+useTouch(wrapContainer, (result) => result ? next() : prev())
 
 </script>
 
@@ -96,6 +94,7 @@ const oldYear = () => {
 }
 
 .c-month {
+  position: relative;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(7, 1fr);
